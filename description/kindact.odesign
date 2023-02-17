@@ -3,7 +3,7 @@
   <ownedViewpoints name="MyViewpoint" modelFileExtension="kindness_act">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Opportunity" domainClass="kindness_act::KindnessOpportunity" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Entity" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::KindnessEntity))" domainClass="kindness_act::KindnessEntity">
+        <nodeMappings name="Entity" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::KindnessEntity))" domainClass="kindness_act::KindnessEntity">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/entity.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -15,37 +15,37 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <nodeMappings name="Actor" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Actor))" domainClass="kindness_act::Actor">
+        <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Actor))" domainClass="kindness_act::Actor">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/actor.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Giver" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Giver))" domainClass="kindness_act::Giver">
+        <nodeMappings name="Giver" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Giver))" domainClass="kindness_act::Giver">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/giver.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Receiver" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Receiver))" domainClass="kindness_act::Receiver">
+        <nodeMappings name="Receiver" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Receiver))" domainClass="kindness_act::Receiver">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/receiver.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Observant" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Observant))" domainClass="kindness_act::Observant">
+        <nodeMappings name="Observant" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Observant))" domainClass="kindness_act::Observant">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/observant.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Location" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Location))" domainClass="kindness_act::Location">
+        <nodeMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Location))" domainClass="kindness_act::Location">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/location.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Act" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Act))" domainClass="kindness_act::Act">
+        <nodeMappings name="Act" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@toolSections.3/@ownedTools[name='EditName']" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Act))" domainClass="kindness_act::Act">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/act.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -109,6 +109,16 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Act" referenceName="act"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Edits">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditName">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:arg0"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
