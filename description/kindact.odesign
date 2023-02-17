@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="kindact" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint" modelFileExtension="kindness_act">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Opportunity" domainClass="kindness_act::KindnessOpportunity" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="Entity" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::KindnessEntity))" domainClass="kindness_act::KindnessEntity">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/actor.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql: self.oclIsTypeOf(kindness_act::Giver)">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/giver.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="Actor" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Actor))" domainClass="kindness_act::Actor">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/actor.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Giver" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Giver))" domainClass="kindness_act::Giver">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/giver.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Entity">
+          <ownedTools xsi:type="tool:ToolGroup" name="Actor">
+            <tools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Actor']" iconPath="/kindact.design/resource/imgs/16/actor.png">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Actor" referenceName="kindentity"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="Giver" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Giver']" iconPath="/kindact.design/resource/imgs/16/giver.png">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Giver" referenceName="kindentity"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="kindact.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
