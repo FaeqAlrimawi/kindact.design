@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Opportunity" domainClass="kindness_act::KindnessOpportunity" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Entity" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::KindnessEntity))" domainClass="kindness_act::KindnessEntity">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/actor.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/entity.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -27,23 +27,53 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <toolSections name="Entity">
+        <nodeMappings name="Receiver" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Receiver))" domainClass="kindness_act::Receiver">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/receiver.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Observant" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Observant))" domainClass="kindness_act::Observant">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/observant.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Actor">
           <ownedTools xsi:type="tool:ToolGroup" name="Actor">
-            <tools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Actor']" iconPath="/kindact.design/resource/imgs/16/actor.png">
-              <variable name="container"/>
-              <viewVariable name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Actor" referenceName="kindentity"/>
-                </firstModelOperations>
-              </initialOperation>
-            </tools>
             <tools xsi:type="tool:NodeCreationDescription" name="Giver" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Giver']" iconPath="/kindact.design/resource/imgs/16/giver.png">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Giver" referenceName="kindentity"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="Receiver" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Receiver']" iconPath="/kindact.design/resource/imgs/16/receiver.png">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Receiver" referenceName="kindentity"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="Observant" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Observant']" iconPath="/kindact.design/resource/imgs/16/observant.png">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Observant" referenceName="kindentity"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Actor']" iconPath="/kindact.design/resource/imgs/16/actor.png">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Actor" referenceName="kindentity"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>
