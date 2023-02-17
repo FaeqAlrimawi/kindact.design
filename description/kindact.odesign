@@ -39,6 +39,18 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
+        <nodeMappings name="Location" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Location))" domainClass="kindness_act::Location">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/location.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Act" semanticCandidatesExpression="aql: self.eContents() -> select (p | p.oclIsTypeOf(kindness_act::Act))" domainClass="kindness_act::Act">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/kindact.design/resource/imgs/64/act.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
         <toolSections name="Actor">
           <ownedTools xsi:type="tool:ToolGroup" name="Actor">
             <tools xsi:type="tool:NodeCreationDescription" name="Giver" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Giver']" iconPath="/kindact.design/resource/imgs/16/giver.png">
@@ -77,6 +89,28 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Space-Time">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Location" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Location']" iconPath="/kindact.design/resource/imgs/16/location.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Location" referenceName="kindentity"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Act">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Act" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Opportunity']/@defaultLayer/@nodeMappings[name='Act']" iconPath="/kindact.design/resource/imgs/16/act.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="kindness_act::Act" referenceName="act"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
